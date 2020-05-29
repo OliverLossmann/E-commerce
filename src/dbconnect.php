@@ -6,7 +6,7 @@ $user     = 'root';
 $password = 'mysql';
 $charset  = 'utf8mb4';
 
-$dns 	  = "mysql:host={$local};dbname={$database};charset={$charset}";
+$dns 	  = "mysql:host={$host};dbname={$database};charset={$charset}";
 
 // För MAMP, så kan dns se lite olika ut
 //$dns 	  = "mysql:unix_socket=/Application/MAMP/tmp/mysql/mysql.sock;dbname={$database}";
