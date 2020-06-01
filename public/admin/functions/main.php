@@ -38,7 +38,7 @@ class Order{
   return $query->fetchAll(PDO::FETCH_ASSOC);
  }
   //fetch post data by post id 
-  public function fetch_data($pid){
+  public function fetch_product($pid){
   global $pdo;
 
   $query = $pdo->prepare('SELECT * FROM products where post_id = ? order by id desc');
