@@ -1,9 +1,34 @@
-<!DOCTYPE html>
+<?php
+	include_once('../../src/dbconnect.php');
+	include_once('functions/post.php');
+	
+	
+?>
 <html>
-<head>
-	<title>Admin</title>
-</head>
-<body>
-	<h1>Admin page</h1>
-</body>
+	<head>
+		<title>Blog</title>
+		<link rel="stylesheet" href="css/style.css">		
+	</head>
+
+
+	<body>
+		<div class="wp">
+		
+		<div class="menu">
+			<ul>
+				<?php 
+			
+			 echo	'<li><a href="index.php">Home</a></li>
+					<li><a href="add_new_post.php">Create New User</a></li>
+					<li><a href="admin/view_all_posts.php">View All Users</a></li>
+					<li><a href="admin/Logout.php">Logout</a></li>';
+			?>
+		 
+			</ul>
+		</div>
+		
+			
+		<div class="footer">
+		</div>
+	</body>
 </html>
