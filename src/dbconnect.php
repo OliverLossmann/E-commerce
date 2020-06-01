@@ -3,7 +3,7 @@
 $host 	  = 'localhost';
 $database = 'ebutik';
 $user     = 'root';
-$password = 'mysql';
+$password = 'pass';
 $charset  = 'utf8mb4';
 
 $dns 	  = "mysql:host={$host};dbname={$database};charset={$charset}";
@@ -33,4 +33,11 @@ try {
 	// echo $e->getMessage();
 	// echo $e->getCode();
 	throw new \PDOException($e->getMessage(), (int) $e->getCode());
+}
+try {
+    $pdo = new PDO('mysql:host=localhost;dbname=ebutik', 'root', 'pass');
+     
+} catch (PDOException $e) {
+    print "Connection Error!: " . $e->getMessage() . "<br/>";
+    die();
 }
