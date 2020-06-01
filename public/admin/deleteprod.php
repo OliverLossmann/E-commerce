@@ -24,17 +24,17 @@
 		</div>
 
 		<div id="content">
+
 			<?php 
 				if(isset($_GET['delete_id'])){
 					$del_id = $_GET['delete_id'];
-					$query = $pdo->prepare("DELETE FROM `users` WHERE `users`.`id` = ?");
+					$query = $pdo->prepare("DELETE FROM `products` WHERE `products`.`id` = ?");
 					$query->bindValue(1,$del_id);
 					$query->execute();
-					header('Location: view_all_posts.php');
+					header('Location: productlist.php');
 					exit();
 				}
 			?>
-
 			</div>
 		</div>
 	</body>
