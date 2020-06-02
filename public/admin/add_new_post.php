@@ -17,8 +17,7 @@
 		$upostalcode = $_POST['postal_code'];
 		$ucity = $_POST['city'];
 		$ucountry = $_POST['country'];
-		
-					 	
+
 							$query = $pdo->prepare("INSERT INTO `ebutik`.`users` (`id`, `first_name`, `last_name`, `email`, `password`, `phone` , `street`, `postal_code`, `city`, `country`) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 							$query->bindValue(1, $ufirstname);	
 							$query->bindValue(2, $ulastname);	
@@ -30,7 +29,7 @@
 							$query->bindValue(8, $ucity);
 							$query->bindValue(9, $ucountry);
  							$query->execute();	
-							header('Location: admin/view_all_posts.php');	
+							header('Location: view_all_posts.php');	
 
 					 }
 				 	}
@@ -61,13 +60,7 @@
 		
 		<div class="menu">
 			<ul>
-				<?php if($check_login == false){
-			echo	'<li><a href="index.php">Home</a></li>';
-					 
-			}else{
-			 echo	'<li><a href="index.php">Home</a></li>';
-					
-			}?>
+			<input type="button" name="register" onclick="location.href='index.php'" value="Home">
 		 
 			</ul>
 		</div>
@@ -97,7 +90,8 @@
 						<li><h3>City</h3><textarea rows="1" name="city"></textarea></li>
 						<li><h3>Country</h3><textarea rows="1" name="country"></textarea></li>
 						
-						<li><input class="submit" value="Create User" type="submit"></input></li>
+						<input class="submit" value="Create User" type="submit"></input>
+						<input type="button" name="return" onclick="location.href='view_all_posts.php'" value="Back">
 					</ul>
 					</form>
 				</div>

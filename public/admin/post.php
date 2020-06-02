@@ -21,16 +21,7 @@ if(isset($_GET['id'])){
 		<div class="wp">
 		<div class="menu">
 			<ul>
-			<?php if($check_login === false){
-			echo	'<li><a href="index.php">Home</a></li>
-					 <li><a href="admin/adminpanel.php">Log in</a></li>';
-			}else{
-			 echo	'<li><a href="index.php">Home</a></li>
-					<li><a href="add_new_post.php">Create New User</a></li>
-					<li><a href="admin/view_all_posts.php">View All Users</a></li>
-					<li><a href="admin/Logout.php">Logout</a></li>';
-			}
-			?>
+			<input type="button" name="register" onclick="location.href='index.php'" value="Home">
 			</ul>
 		</div>
 		<div class="content">
@@ -51,7 +42,7 @@ if(isset($_GET['id'])){
 				
 			</div>
 			<div class="right-side">
-			
+			<input type="button" name="return" onclick="location.href='view_all_posts.php'" value="Back">
 			</div>
 			</div>
 			</div>

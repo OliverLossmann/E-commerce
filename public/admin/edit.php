@@ -83,8 +83,8 @@ $post = new Main;
 						<li><h3>City</h3><textarea rows="1" name="city"></textarea></li>
 						<li><h3>Country</h3><textarea rows="1" name="country"></textarea></li>
 						
-						<li><input class="submit" value="Edit User" type="submit"></input></li>
-						
+						<input class="submit" value="Edit User" type="submit"></input>
+						<input type="button" name="return" onclick="location.href='view_all_posts.php'" value="Back">
 					</ul>
 					</form>
 				</div>

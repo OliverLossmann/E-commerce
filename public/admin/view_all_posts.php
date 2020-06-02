@@ -20,9 +20,9 @@
 		
 		<div class="menu">
 			<ul>
-				<li><a href="../index.php">Home</a></li>
-				<li><a href="../add_new_post.php">Create New User</a></li>
- 				<li><a href="logout.php">Logout</a></li>
+				<input type="button" name="register" onclick="location.href='index.php'" value="Home">
+				<input type="button" name="login" onclick="location.href='add_new_post.php'" value="Create New User">
+ 				<input type="button" name="admin" onclick="location.href='Logout.php'" value="Logout">
 			</ul>
 		</div>
         <div id="content">
@@ -38,12 +38,14 @@
 							</td>
 							
 								<div class="post-link">
-									<a href="../post.php?id=<?php echo $post['id'];?>"><?php echo $post['first_name'];?></a>
+									<h3><a href="post.php?id=<?php echo $post['id'];?>"><?php echo $post['first_name'];?></a></h3>
 								</div>
 							</td>
 							
 								<div class="post-hidden">
-									<a href="edit.php?post_id=<?php echo $post['id'];?>">Edit</a>|<a href="post.php?id=<?php echo $post['id'];?>">View</a>|<a href="#" class="post_delete" name="<?php echo $post['id']; ?>" onClick="deletepost(<?php echo $post['id']; ?>)">Delete</a>|
+									<input type="button" name="admin" onclick="location.href='edit.php?post_id=<?php echo $post['id'];?>'" value="Edit">
+									<input type="button" name="admin" onclick="location.href='post.php?id=<?php echo $post['id'];?>'" value="View">
+									<input class="post_delete" type="button" name="<?php echo $post['id']; ?>" onClick="deletepost(<?php echo $post['id']; ?>)" value="Delete">
 								</div>
 							</td><?php }?>
 							<script type="text/javascript">

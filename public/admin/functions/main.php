@@ -33,7 +33,7 @@ class Order{
   global $pdo;
 
   $query = $pdo->prepare('SELECT * FROM products order by id desc');
-  $query->execute([':id'=>$pid]);
+  $query->execute();
 
   return $query->fetchAll(PDO::FETCH_ASSOC);
  }

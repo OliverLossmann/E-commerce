@@ -16,16 +16,15 @@
 		
 		<div class="menu">
 			<ul>
-				<?php 
-			
-			 echo	'<li><a href="index.php">Home</a></li>
-					<li><a href="add_new_post.php">Create New User</a></li>
-					<li><a href="admin/view_all_posts.php">View All Users</a></li>
-					<li><a href="admin/Logout.php">Logout</a></li>
-					<li><a href="productlist.php">Productlist</a></li>';
-			?>
-		 
-			</ul>
+
+			<input type="button" name="register" onclick="location.href='index.php'" value="Home">
+			<input type="button" name="login" onclick="location.href='add_new_post.php'" value="Create New User">
+			<input type="button" name="mypage" onclick="location.href='view_all_posts.php'" value="View All Users">
+			<input type="button" name="admin" onclick="location.href='Logout.php'" value="Logout">
+			<input type="button" name="logout" onclick="location.href='productlist.php'" value="Product List">
+			<input type="button" name="logout" onclick="location.href='../index.php'" value="User Index">
+        </ul>
+
 		</div>
 		
 			

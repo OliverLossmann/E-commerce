@@ -20,9 +20,9 @@
         
         <div class="menu">
             <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="creatprod.php">Create New Product</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <input type="button" name="register" onclick="location.href='index.php'" value="Home">
+                <input type="button" name="login" onclick="location.href='creatprod.php'" value="Create New Product">
+                <input type="button" name="admin" onclick="location.href='logout.php'" value="Logout">
             </ul>
         </div>
         <div id="content">
@@ -38,7 +38,7 @@
                             </td>
                             
                                 <div class="post-link">
-                                    <a href="../viewprod.php?id=<?php echo $post['id'];?>"><?php echo $post['title'];?></a>
+                                    <h1><a href="../viewprod.php?id=<?php echo $post['id'];?>"><?php echo $post['title'];?></a></h1>
                                 </div>
                                 <div class="post-img">
                                     <a href="../viewprod.php?id=<?php echo $post['id']?>"><img src="<?php echo $post['img_url']?>"></img></a>
@@ -46,7 +46,9 @@
                             </td>
                             
                                 <div class="post-hidden">
-                                    <a href="editprod.php?post_id=<?php echo $post['id'];?>">Edit</a>|<a href="viewprod.php?id=<?php echo $post['id'];?>">View</a>|<a href="#" class="post_delete" name="<?php echo $post['id']; ?>" onClick="deletepost(<?php echo $post['id']; ?>)">Delete</a>|
+                                    <input type="button" name="admin" onclick="location.href='editprod.php?post_id=<?php echo $post['id'];?>'" value="Edit">
+                                    <input type="button" name="return" onclick="location.href='viewprod.php?id=<?php echo $post['id'];?>'" value="View">
+                                    <input class="post_delete" type="button" name="<?php echo $post['id']; ?>" onClick="deletepost(<?php echo $post['id']; ?>)" value="Delete">
                                 </div>
                             </td><?php }?>
                             <script type="text/javascript">

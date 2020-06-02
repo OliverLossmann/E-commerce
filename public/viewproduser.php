@@ -1,6 +1,6 @@
 <?php
-include_once('../../src/dbconnect.php');
-include_once('functions/post.php'); 
+include_once('../src/dbconnect.php');
+include_once('admin/functions/post.php'); 
 $post  = new Order;
 $check = new Order;
 $check_login = $check->logged_in();
@@ -20,13 +20,13 @@ if(isset($_GET['id'])){
 	<body>
 		<div class="wp">
 		<div class="menu">
-			<ul>
-			<input type="button" name="register" onclick="location.href='index.php'" value="Home">
-			<input type="button" name="login" onclick="location.href='add_new_post.php'" value="Create New User">
-			<input type="button" name="mypage" onclick="location.href='view_all_posts.php'" value="View All Users">
-			<input type="button" name="admin" onclick="location.href='Logout.php'" value="Logout">
-			<input type="button" name="logout" onclick="location.href='productlist.php'" value="Product List">
-			</ul>
+				<ul>
+			<input type="button" name="register" onclick="location.href='register.php'" value="Register">
+			<input type="button" name="login" onclick="location.href='login.php'" value="Login">
+			<input type="button" name="mypage" onclick="location.href='mypage.php'" value="Go to profile">
+			<input type="button" name="admin" onclick="location.href='admin/index.php'" value="Admin">
+			<input type="button" name="logout" onclick="location.href='logout.php'" value="Logout">
+        </ul>
 		</div>
 		<div class="content">
 			<div class="left-side">
@@ -46,7 +46,8 @@ if(isset($_GET['id'])){
 				
 			</div>
 			<div class="right-side">
-			<input type="button" name="return" onclick="location.href='productlist.php'" value="Back">
+			<input type="button" name="return" onclick="location.href=''" value="Add To Cart">
+			<input type="button" name="return" onclick="location.href='index.php'" value="Back">
 			</div>
 			</div>
 			</div>
