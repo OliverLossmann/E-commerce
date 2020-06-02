@@ -20,7 +20,7 @@
         
         <div class="menu">
             <ul>
-                <li><a href="../index.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="creatprod.php">Create New Product</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>

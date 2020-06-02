@@ -30,7 +30,7 @@
 							$query->bindValue(8, $ucity);
 							$query->bindValue(9, $ucountry);
  							$query->execute();	
-							header('Location: admin/view_all_posts.php');	
+							header('Location: view_all_posts.php');	
 
 					 }
 				 	}
