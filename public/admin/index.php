@@ -20,8 +20,8 @@
 			
 			 echo	'<li><a href="index.php">Home</a></li>
 					<li><a href="add_new_post.php">Create New User</a></li>
-					<li><a href="admin/view_all_posts.php">View All Users</a></li>
-					<li><a href="admin/Logout.php">Logout</a></li>
+					<li><a href="view_all_posts.php">View All Users</a></li>
+					<li><a href="Logout.php">Logout</a></li>
 					<li><a href="productlist.php">Productlist</a></li>';
 			?>
 		 

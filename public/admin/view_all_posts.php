@@ -20,8 +20,8 @@
 		
 		<div class="menu">
 			<ul>
-				<li><a href="../index.php">Home</a></li>
-				<li><a href="../add_new_post.php">Create New User</a></li>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="add_new_post.php">Create New User</a></li>
  				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</div>
