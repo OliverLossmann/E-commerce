@@ -7,8 +7,6 @@ if(isset($_POST) & !empty($_POST)){
     // PHP Form Validations
     if(empty($_POST['email'])){ $errors[]="E-Mail field is Required"; }
     if(empty($_POST['password'])){ $errors[]="Password field is Required"; }
-   
-   
 
     if(empty($errors)){
         // Check the Login Credentials
@@ -38,11 +36,10 @@ if(isset($_POST) & !empty($_POST)){
                 $_SESSION['city'] = $res['city'];
                 $_SESSION['last_login'] = time();
                 // redirect the user to members area/dashboard page
-                $timer = "<p>Logging in, you will be redirected in <span id='counter'>5</span> second(s).
-        </p><script type='text/javascript'>
-        function countdown() {
-            var i = document.getElementById('counter');
-            if (parseInt(i.innerHTML)<=0) {
+                $timer = "<p>Logging in, you will be redirected in <span id='counter'>5</span> second(s).</p><script type='text/javascript'>
+                function countdown() {
+                var i = document.getElementById('counter');
+                if (parseInt(i.innerHTML)<=0) {
                 location.href = 'mypage.php';
                 }if (parseInt(i.innerHTML)!=0) {
                     i.innerHTML = parseInt(i.innerHTML)-1;
@@ -92,6 +89,7 @@ if(isset($_POST) & !empty($_POST)){
                                 <!-- Change this to a button or input when using this as a form -->
 
                                 <input type="submit" class="btn btn-lg btn-success btn-block" value="Login" />
+                                <input type="button" name="return" onclick="location.href='index.php'" value="Back">
 
                             </fieldset>
                         </form>

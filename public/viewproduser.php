@@ -20,29 +20,28 @@ if(isset($_GET['id'])){
 	<body>
 		<div class="wp">
 		<div class="menu">
-			<ul>
-			<?php if($check_login === false){
-			echo	'<li><a href="index.php">Home</a></li>
-					 <li><a href="adminpanel.php">Log in</a></li>';
-			}else{
-			 echo	'<li><a href="index.php">Home</a></li>
-					<li><a href="add_new_post.php">Create New User</a></li>
-					<li><a href="view_all_posts.php">View All Users</a></li>
-					<li><a href="Logout.php">Logout</a></li>';
-			}
-			?>
-			</ul>
+
+				<ul>
+			<input type="button" name="register" onclick="location.href='register.php'" value="Register">
+			<input type="button" name="login" onclick="location.href='login.php'" value="Login">
+			<input type="button" name="mypage" onclick="location.href='mypage.php'" value="Go to profile">
+			<input type="button" name="admin" onclick="location.href='admin/index.php'" value="Admin">
+			<input type="button" name="logout" onclick="location.href='logout.php'" value="Logout">
+        </ul>
+
 		</div>
 		<div class="content">
 			<div class="left-side">
 				<div class="post">
 				<div class="post-head">
 					<h1><?php echo $post['title'];?></h1>
-					<?php echo $post['description'];?>
-					<br>
-					<?php echo $post['price'];?>
+
 					<div class="post-img">
                        <img src="<?php echo $post['img_url']?>"></img>
+                       <br>
+                       <?php echo $post['price'];?> KR
+                       <h2><?php echo $post['description'];?></h2>
+
                                 </div>
 				</div>
 				
@@ -51,8 +50,10 @@ if(isset($_GET['id'])){
 				
 			</div>
 			<div class="right-side">
-			<a href="">Add To Cart</a>
-			<a href="index.php">Back</a>
+
+			<input type="button" name="return" onclick="location.href=''" value="Add To Cart">
+			<input type="button" name="return" onclick="location.href='index.php'" value="Back">
+
 			</div>
 			</div>
 			</div>

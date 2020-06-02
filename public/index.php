@@ -18,49 +18,39 @@ $check_login = $check->logged_in();
 
 <body>
 <div class="wp">
-        
-        <div class="menu">
-            <ul>
-            	<h1>Shop page</h1>
-	<a href="register.php">Register here</a>
-	<a href="login.php">Login here</a>
-	<input type="button" name="return" onclick="location.href='mypage.php'" value="Go to profile">
-	<input type="button" name="return" onclick="location.href='admin/index.php'" value="Admin">
-                <li><a href="logout.php">Logout</a></li>
-            </ul>
-        </div>
-        <div id="content">
-            <div class="posts-holder">
-            <?php foreach($posts as $post){?>
-                <table>
-                    <tbody>
-                        <tr class="tr-st">
-                            
-                                <div class="check">
-                                    
-                                </div>
-                            </td>
-                            
-                                <div class="post-link">
-                                    <a href="../viewprod.php?id=<?php echo $post['id'];?>"><h1><?php echo $post['title'];?></h1></a>
-                                </div>
-                                <div class="post-img">
-                                    <a href="../viewprod.php?id=<?php echo $post['id']?>"><img src="<?php echo $post['img_url']?>"></img></a>
-                                </div>
-                            </td>
-                            
-                                <div class="post-hidden">
-                                    <a href="viewproduser.php?id=<?php echo $post['id'];?>">View</a>
-                                    <a href="">Add To Cart</a>
-                                </div>
-                            </td><?php }?>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-<div class="footer">
-            
-        </div>
+
+	<div class="menu">
+		<ul>
+			<h1>Shop page</h1>
+			<input type="button" name="register" onclick="location.href='register.php'" value="Register">
+			<input type="button" name="login" onclick="location.href='login.php'" value="Login">
+			<input type="button" name="mypage" onclick="location.href='mypage.php'" value="Go to profile">
+			<input type="button" name="admin" onclick="location.href='admin/index.php'" value="Admin">
+			<input type="button" name="logout" onclick="location.href='logout.php'" value="Logout">
+        </ul>
+    </div>
+<div id="content">
+	<div class="posts-holder">
+		<?php foreach($posts as $post){?>
+			<table>
+				<tbody>
+					<tr class="tr-st">
+						<div class="post-link">
+							<a href="../viewprod.php?id=<?php echo $post['id'];?>"><h1><?php echo $post['title'];?></h1></a>
+						</div>
+						<div class="post-img">
+							<a href="../viewprod.php?id=<?php echo $post['id']?>"><img src="<?php echo $post['img_url']?>"></img></a>
+						</div>
+						<div class="post-hidden">
+							<input type="button" name="return" onclick="location.href='viewproduser.php?id=<?php echo $post['id'];?>'" value="View">
+							<input type="button" name="return" onclick="location.href=''" value="Add To Cart">
+                        </div>
+                    <?php }?>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</div>
+
 </body>
 </html>

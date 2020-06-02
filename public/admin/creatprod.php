@@ -12,9 +12,7 @@
 		$description = $_POST['description'];
 		$price = $_POST['price'];
 		$img = $_POST['img_url'];
-		
-		
-					 	
+
 							$query = $pdo->prepare("INSERT INTO `products` (`id`, `title`, `description`, `price`, `img_url`) VALUES (NULL, ?, ?, ?, ?)");
 							$query->bindValue(1, $prodname);	
 							$query->bindValue(2, $description);	
@@ -26,14 +24,6 @@
 					 }
 				 	}
 				
-						
-
-		
-
-
-
-		
-	
 	
 ?>
 
@@ -44,20 +34,12 @@
 		<link rel="stylesheet" href="css/style.css">
 		<script type="text/javascript" src="js/jquery.js"></script>		
 	</head>
-
-
-	<body>
+<body>
 		<div class="wp">
 		
 		<div class="menu">
 			<ul>
-				<?php if($check_login == false){
-			echo	'<li><a href="index.php">Home</a></li>';
-					 
-			}else{
-			 echo	'<li><a href="index.php">Home</a></li>';
-					
-			}?>
+			<input type="button" name="register" onclick="location.href='index.php'" value="Home">
 		 
 			</ul>
 		</div>
@@ -83,7 +65,8 @@
 						<li><h3>Images</h3><textarea rows="1" name="img_url"></textarea></li>
 						
 						
-						<li><input class="submit" value="Create Products" type="submit"></input></li>
+						<input class="submit" value="Create Products" type="submit">
+						<input type="button" name="return" onclick="location.href='productlist.php'" value="Back">
 					</ul>
 					</form>
 				</div>
