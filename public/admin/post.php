@@ -21,7 +21,9 @@ if(isset($_GET['id'])){
 		<div class="wp">
 		<div class="menu">
 			<ul>
+
 			<input type="button" name="register" onclick="location.href='index.php'" value="Home">
+
 			</ul>
 		</div>
 		<div class="content">

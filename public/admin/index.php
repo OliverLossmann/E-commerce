@@ -17,6 +17,7 @@
 		<div class="menu">
 			<ul>
 
+
 			<input type="button" name="register" onclick="location.href='index.php'" value="Home">
 			<input type="button" name="login" onclick="location.href='add_new_post.php'" value="Create New User">
 			<input type="button" name="mypage" onclick="location.href='view_all_posts.php'" value="View All Users">

@@ -18,6 +18,7 @@ $check_login = $check->logged_in();
 
 <body>
 <div class="wp">
+
 	<div class="menu">
 		<ul>
 			<h1>Shop page</h1>
@@ -50,5 +51,6 @@ $check_login = $check->logged_in();
             </table>
     </div>
 </div>
+
 </body>
 </html>

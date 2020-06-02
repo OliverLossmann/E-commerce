@@ -20,9 +20,11 @@
 		
 		<div class="menu">
 			<ul>
+
 				<input type="button" name="register" onclick="location.href='index.php'" value="Home">
 				<input type="button" name="login" onclick="location.href='add_new_post.php'" value="Create New User">
  				<input type="button" name="admin" onclick="location.href='Logout.php'" value="Logout">
+
 			</ul>
 		</div>
         <div id="content">

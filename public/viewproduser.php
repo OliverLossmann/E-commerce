@@ -20,6 +20,7 @@ if(isset($_GET['id'])){
 	<body>
 		<div class="wp">
 		<div class="menu">
+
 				<ul>
 			<input type="button" name="register" onclick="location.href='register.php'" value="Register">
 			<input type="button" name="login" onclick="location.href='login.php'" value="Login">
@@ -27,17 +28,20 @@ if(isset($_GET['id'])){
 			<input type="button" name="admin" onclick="location.href='admin/index.php'" value="Admin">
 			<input type="button" name="logout" onclick="location.href='logout.php'" value="Logout">
         </ul>
+
 		</div>
 		<div class="content">
 			<div class="left-side">
 				<div class="post">
 				<div class="post-head">
 					<h1><?php echo $post['title'];?></h1>
+
 					<div class="post-img">
                        <img src="<?php echo $post['img_url']?>"></img>
                        <br>
                        <?php echo $post['price'];?> KR
                        <h2><?php echo $post['description'];?></h2>
+
                                 </div>
 				</div>
 				
@@ -46,8 +50,10 @@ if(isset($_GET['id'])){
 				
 			</div>
 			<div class="right-side">
+
 			<input type="button" name="return" onclick="location.href=''" value="Add To Cart">
 			<input type="button" name="return" onclick="location.href='index.php'" value="Back">
+
 			</div>
 			</div>
 			</div>
