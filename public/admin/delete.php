@@ -30,7 +30,7 @@
 					$query = $pdo->prepare("DELETE FROM `users` WHERE `users`.`id` = ?");
 					$query->bindValue(1,$del_id);
 					$query->execute();
-					header('Location: view_all_posts.php');
+					header('Location: view_all_users.php');
 					exit();
 				}
 			?>

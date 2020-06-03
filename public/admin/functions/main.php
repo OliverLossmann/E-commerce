@@ -20,10 +20,6 @@ class Main{
 
   return $query->fetch();
  }
-  //check if user is logged in 
-  public function logged_in(){
-    return (isset($_SESSION['loggedin'])) ? true : false;
-  }
 }
 
 class Order{
@@ -47,9 +43,5 @@ class Order{
 
   return $query->fetch();
  }
-  //check if user is logged in 
-  public function logged_in(){
-    return (isset($_SESSION['loggedin'])) ? true : false;
-  }
 }
 ?>

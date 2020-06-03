@@ -19,10 +19,6 @@ class Main{
 
 		return $query->fetch();
 	}
-
-		public function logged_in(){
-			 return (isset($_SESSION['loggedin'])) ? true : false;
-		}
 }
 
 //hello
@@ -46,10 +42,6 @@ class Order{
 
 		return $query->fetch();
 	}
-
-		public function logged_in(){
-			 return (isset($_SESSION['loggedin'])) ? true : false;
-		}
 }
 
 ?>
