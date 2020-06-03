@@ -1,11 +1,17 @@
 <?php
-    session_start();
     include_once('../../src/dbconnect.php');
+    include_once('../../src/config.php');
     include_once('functions/main.php');
+
+    if ($_SESSION["id"] === '1' || $_SESSION["id"] === '2' || $_SESSION["id"] === '3') {
+    
+} else {
+    header("Location:../redirect.php");
+}
     $post  = new Order;
     $check = new Order;  
     $posts = $post->get_all_products();
-    $check_login = $check->logged_in();
+
     
 ?>
 <!DOCTYPE html>

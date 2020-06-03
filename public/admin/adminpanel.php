@@ -1,8 +1,15 @@
 <?php  
 	include ('../../src/dbconnect.php');
+	include ('../../src/config.php');
 	include ('functions/main.php');
+
+		if ($_SESSION["id"] === '1' || $_SESSION["id"] === '2' || $_SESSION["id"] === '3') {
+    
+} else {
+	header("Location:../redirect.php");
+}
 	$check = new Main;
-	$check_login = $check->logged_in();
+	
 	
 ?>
 <!DOCTYPE html>

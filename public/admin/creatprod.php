@@ -1,11 +1,13 @@
 <?php 
 	include ('../../src/dbconnect.php');
+	include ('../../src/config.php');
 	include ('functions/main.php');
-	if($check_login === false){
-		header('Location: index.php');
-	}
-	else{
-	 
+
+	if ($_SESSION["id"] === '1' || $_SESSION["id"] === '2' || $_SESSION["id"] === '3') {
+    
+    } else {
+	header("Location:../redirect.php");
+}
 	//check if products Publish a post
  	if($_POST){
 		$prodname = $_POST['title'];
@@ -22,7 +24,7 @@
 							header('Location: productlist.php');	
 
 					 }
-				 	}
+				 	
 				
 	
 ?>
