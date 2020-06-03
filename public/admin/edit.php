@@ -39,7 +39,7 @@ $post = new Main;
 							$query->bindValue(9, $ucountry);
 	                        $query->bindValue(10, $pid);
                             $query->execute(); 
-                            header('Location: view_all_posts.php'); 
+                            header('Location: view_all_users.php'); 
 
 
 					 }
@@ -91,7 +91,7 @@ $post = new Main;
 						<li><h3>Country</h3><textarea rows="1" name="country"></textarea></li>
 						
 						<input class="submit" value="Edit User" type="submit"></input>
-						<input type="button" name="return" onclick="location.href='view_all_posts.php'" value="Back">
+						<input type="button" name="return" onclick="location.href='view_all_users.php'" value="Back">
 					</ul>
 					</form>
 				</div>

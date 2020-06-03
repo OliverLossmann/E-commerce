@@ -50,7 +50,7 @@ if(isset($_GET['id'])){
 				
 			</div>
 			<div class="right-side">
-			<input type="button" name="return" onclick="location.href='view_all_posts.php'" value="Back">
+			<input type="button" name="return" onclick="location.href='view_all_users.php'" value="Back">
 			</div>
 			</div>
 			</div>
