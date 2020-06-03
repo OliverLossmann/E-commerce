@@ -1,9 +1,10 @@
 <?php
 include_once('../src/dbconnect.php');
+require '../src/config.php';
 include_once('admin/functions/post.php'); 
 $post  = new Order;
 $check = new Order;
-$check_login = $check->logged_in();
+
 
 
 if(isset($_GET['id'])){
