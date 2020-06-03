@@ -1,9 +1,15 @@
 <?php
 include_once('../../src/dbconnect.php');
-include_once('functions/post.php'); 
+include_once('../../src/config.php');
+include_once('functions/post.php');
+if ($_SESSION["id"] === '1' || $_SESSION["id"] === '2' || $_SESSION["id"] === '3') {
+    
+} else {
+    header("Location:../redirect.php");
+} 
 $post  = new Order;
 $check = new Order;
-$check_login = $check->logged_in();
+
 
 
 if(isset($_GET['id'])){

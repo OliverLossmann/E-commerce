@@ -6,7 +6,7 @@ class Main{
   global $pdo;
 
   $query = $pdo->prepare('SELECT * FROM users order by id desc');
-  $query->execute([':id'=>$pid]);
+  $query->execute();
 
   return $query->fetchAll(PDO::FETCH_ASSOC);
  }

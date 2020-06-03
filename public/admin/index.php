@@ -1,8 +1,16 @@
 <?php
 	include_once('../../src/dbconnect.php');
+	include_once('../../src/config.php');
 	include_once('functions/post.php');
 	
-	
+
+
+	if ($_SESSION["id"] === '1' || $_SESSION["id"] === '2' || $_SESSION["id"] === '3') {
+    echo "Welcome to the admin's area, " . $_SESSION['first_name'] ." ". $_SESSION['last_name'] . "!";
+} else {
+	header("Location:../redirect.php");
+}
+
 ?>
 <html>
 	<head>

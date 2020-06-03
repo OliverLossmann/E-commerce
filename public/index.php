@@ -24,8 +24,8 @@ $check_login = $check->logged_in();
 			<h1>Shop page</h1>
 			<input type="button" name="register" onclick="location.href='register.php'" value="Register">
 			<input type="button" name="login" onclick="location.href='login.php'" value="Login">
-			<input type="button" name="mypage" onclick="location.href='mypage.php'" value="Go to profile">
-			<input type="button" name="admin" onclick="location.href='admin/index.php'" value="Admin">
+			<input type="button" name="mypage" onclick="location.href='mypage.php?id=<?php echo $_SESSION['id'];?>'" value="Go to profile">
+			<input type="button" name="admin" onclick="location.href='admin/index.php?id=<?php echo $_SESSION['id'];?>'" value="Admin">
 			<input type="button" name="logout" onclick="location.href='logout.php'" value="Logout">
         </ul>
     </div>

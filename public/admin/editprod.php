@@ -1,6 +1,13 @@
 <?php
 include_once('../../src/dbconnect.php');
+include ('../../src/config.php');
 include_once('functions/main.php'); 
+
+if ($_SESSION["id"] === '1' || $_SESSION["id"] === '2' || $_SESSION["id"] === '3') {
+    
+} else {
+	header("Location:../redirect.php");
+}
 $post = new Order;
 
 	if(isset($_GET['post_id'])){
