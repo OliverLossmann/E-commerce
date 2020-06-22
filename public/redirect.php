@@ -1,7 +1,6 @@
 <?php  
-require '../src/config.php';
-
-require '../src/dbconnect.php';
+require ('../src/config.php');
+require ('../src/dbconnect.php');
 
 
 $timer = "<p>You will be redirected in <span id='counter'>5</span> second(s).

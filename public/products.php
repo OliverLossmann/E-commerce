@@ -1,16 +1,14 @@
 <?php
-include_once('../src/dbconnect.php');
 require ('../src/config.php');
-include_once('admin/functions/post.php'); 
+require ('../src/dbconnect.php');
+require('admin/functions/main.php');
+
 $post  = new Order;
-$check = new Order;
+$check = new Order;  
+$posts = $post->get_all_products();
 
 
-
-if(isset($_GET['id'])){
-	$pid = $_GET['id'];
-	$post = $post->fetch_product($pid);
-	?>
+?>
 <!DOCTYPE html>
 <html>
 
@@ -30,6 +28,9 @@ if(isset($_GET['id'])){
 <div class="collapse navbar-collapse" id="main-navigation">
 		<ul class="navbar-nav">
 			<?php include('cart.php') ?>
+			<li class="nav-item">
+			<a class="nav-link" type="button" name="products" href='products.php'>Products</a>
+			</li>
 			<li class="nav-item">
 			<a class="nav-link" type="button" name="register" href='register.php'>Register</a>
 			</li>
@@ -55,29 +56,32 @@ if(isset($_GET['id'])){
     </div>
 </nav>
 
+<header class="container">
+	<div class="jumbotron">
+  <h1>Products</h1>
+  </div>
+</header>
 <div class="container features">
   <div class="row">
+  	<?php foreach($posts as $post){?>
     <div class="col-lg-4 col-md-4 col-sm-12">
-      <a><img class="img-fluid" src="<?php echo $post['img_url']?>"></a>
-      <p><a><h1><?php echo $post['title'];?></a><a class="price"><?php echo $post['price'];?> KR </a></h1></p>
-      <p><a><?php echo $post['description'];?></a></p>
+      <a  href="viewproduser.php?id=<?php echo $post['id'];?>"><img class="img-fluid" src="<?php echo $post['img_url']?>"></a>
+      <p><a href="../public/viewproduser.php?id=<?php echo $post['id'];?>"><?php echo $post['title'];?></a> <a class="price"><?php echo $post['price'];?> KR </a></p>
       <form action="add-cart-item.php" method="POST">
       	<input type="hidden" name="productId" value="<?=$post['id']?>">
       	<input type="number" name="quantity" value="1" min="0">
       	<input type="submit" name="addToCart" value="Add to cart">
-      	<input onclick="location.href='index.php'" type= "button" value="Back" />
       </form>
-
-       
+      <br>
   </div> 
- 
   <?php }?>
 </div>
 </div>
+
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="javascript/main.js"></script>
 </body>
 </html>
-
