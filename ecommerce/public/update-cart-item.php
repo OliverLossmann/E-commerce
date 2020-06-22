@@ -1,0 +1,15 @@
+<?php  
+require('../src/config.php');
+require ('../src/dbconnect.php');
+
+
+if (!empty($_POST['cartId']) 
+	&& !empty($_POST['quantity'])
+	&& isset($_SESSION['cartItems'][$_POST['cartId']])
+	) {
+
+	$_SESSION['cartItems'][$_POST['cartId']]['quantity'] = $_POST['quantity'];
+}
+
+header('Location: ' . $_SERVER['HTTP_REFERER']);
+exit;
