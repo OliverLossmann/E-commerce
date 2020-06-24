@@ -36,14 +36,19 @@ if(isset($_GET['id'])){
 			<div class="left-side">
 				<div class="post">
 				<div class="post-head">
-					<h1><?php echo $post['first_name'];?></h1>
-					<?php echo $post['last_name'];?>
-					<?php echo $post['email'];?>
-					<p><?php echo $post['country']?></p>
+					<h1>User Info</h1>
+					<?php echo $post['first_name'];?> <br>
+					<?php echo $post['last_name'];?><br>
+					<?php echo $post['email'];?><br>
+					<?php echo $post['phone'];?><br>
+					<?php echo $post['street'];?><br>
+					<?php echo $post['postal_code'];?><br>
+					<?php echo $post['city'];?><br>
+					<?php echo $post['country'];?><br>
 				</div>
 				
 				<div class="post-body">
-				<?php echo $post['content'];?>
+				
 				
 				</div>
 			</div>

@@ -111,6 +111,74 @@ foreach ($_SESSION['cartItems'] as $cartId => $cartItem) {
 </table>
 
 
+<form action="create-order.php" method="POST">
+    <input type="hidden" name="totalPrice" value="<?=$cartTotalSum?>">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputName">Förnamn</label>
+      <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Henke">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="lastname">Efternamn</label>
+      <input type="text" class="form-control" name="lastName" id="inputPassword4" placeholder="Henkesson">
+    </div>
+
+  <div class="form-group col-md-6">
+    <label for="inputAddress">E-post</label>
+    <input type="email" class="form-control" name="email" id="inputEmail4"  placeholder="John@gmail.com">
+  </div>
+
+  <div class="form-group col-md-6">
+    <label for="inputAddress2">Lösenord</label>
+    <input type="password" class="form-control" name="password" id="inputPassword4" placeholder="...">
+  </div>
+  <div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="inputAddress">Adress</label>
+    <input type="text" class="form-control" name="street" id="inputAddress"  placeholder="Kungsgatan 123">
+  </div>
+
+  <div class="form-group col-md-2">
+      <label for="inputZip">Postnummer</label>
+      <input type="text" class="form-control" name="postalCode" id="inputZip">
+    </div>
+    
+    <div class="form-group col-md-2">
+      <label for="inputCity">Stad</label>
+      <input type="text" class="form-control" name="city" id="inputCity">
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Telefon</label>
+      <input type="text" class="form-control" name="phone" id="inputCity">
+    </div>
+ 
+
+    <div class="form-group col-md-4">
+      <label for="inputState">Land</label>
+      <select name="country" select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option value="SE">Sverige</option>
+      </select>
+    </div>
+
+    
+
+  <div class="form-group">
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+      Jag har läst och godkänner villkoren.
+      </label>
+    </div>
+
+  
+  <button type="submit" class="btn btn-primary" name="createOrderBtn">Genomför Köp</button>
+  
+</form>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="javascript/main.js"></script>

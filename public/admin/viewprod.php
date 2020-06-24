@@ -52,6 +52,19 @@ if(isset($_GET['id'])){
 				
 			</div>
 			<div class="right-side">
+			<div class="post-hidden">
+                                    <input type="button" name="admin" onclick="location.href='editprod.php?post_id=<?php echo $post['id'];?>'" value="Edit">
+                                    <input class="post_delete" type="button" name="<?php echo $post['id']; ?>" onClick="deletepost(<?php echo $post['id']; ?>)" value="Delete">
+                                </div>
+                        
+                            <script type="text/javascript">
+                                function deletepost(x){
+                                    var conf = confirm("Are you sure you want to delete this post?");
+                                    if(conf == true){
+                                    window.location = "deleteprod.php?delete_id="+x;
+                                    }
+                                }
+                            </script>
 			<input type="button" name="return" onclick="location.href='productlist.php'" value="Back">
 			</div>
 			</div>
