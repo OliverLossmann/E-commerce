@@ -57,8 +57,9 @@ $post = new Main;
 	<html>
 		<head>
 			<title>Edit - User</title>
-			<link rel="stylesheet" href="../css/style.css">
-				  	
+			<link rel="stylesheet" href="css/style.css">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 		
 		</head>
 
@@ -80,6 +81,8 @@ $post = new Main;
 			<div class="right-side">
 				<div class="right-menu">
 					<ul>
+					<form>
+ 
 					<li><h3>First Name</h3><textarea rows="1" name="first_name"></textarea></li>
 						<li><h3>Last Name</h3><textarea rows="1" name="last_name"></textarea></li>
 						<li><h3>Email</h3><textarea rows="1" name="email"></textarea></li>
@@ -90,7 +93,7 @@ $post = new Main;
 						<li><h3>City</h3><textarea rows="1" name="city"></textarea></li>
 						<li><h3>Country</h3><textarea rows="1" name="country"></textarea></li>
 						
-						<input class="submit" value="Edit User" type="submit"></input>
+						<input class="submit" value="Save Changes" type="submit"></input>
 						<input type="button" name="return" onclick="location.href='view_all_users.php'" value="Back">
 					</ul>
 					</form>

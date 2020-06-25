@@ -21,7 +21,9 @@ if(isset($_GET['id'])){
 <html>
 	<head>
 		<title>Users</title>
-		<link rel="stylesheet" href="css/style.css">		
+		<link rel="stylesheet" href="css/style.css">	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
 	</head>
 
 
@@ -36,21 +38,34 @@ if(isset($_GET['id'])){
 			<div class="left-side">
 				<div class="post">
 				<div class="post-head">
-					<h1><?php echo $post['first_name'];?></h1>
-					<?php echo $post['last_name'];?>
-					<?php echo $post['email'];?>
-					<p><?php echo $post['country']?></p>
+					
+					<div class="card">
+  <h5 class="card-header">User Information</h5>
+  <div class="card-body">
+
+	<b>First Name:</b> <?php echo $post['first_name'];?><br>
+    <b>Last Name:</b> <?php echo $post['last_name'];?><br>
+	<b>Email:</b> <?php echo $post['email'];?><br>
+	<b>Phone:</b> <?php echo $post['phone'];?><br>
+	<b>Street:</b> <?php echo $post['street'];?><br>
+	<b>Postal Code:</b> <?php echo $post['postal_code'];?><br>
+	<b>City:</b> <?php echo $post['city'];?><br>
+	<b>Country:</b> <?php echo $post['country'];?><br>
+    <a href="edit.php" class="btn btn-primary">Edit</a><a href="view_all_users.php" class="btn btn-primary">Back</a>
+  </div>
+</div>
+					
 				</div>
 				
 				<div class="post-body">
-				<?php echo $post['content'];?>
+				
 				
 				</div>
 			</div>
 				
 			</div>
 			<div class="right-side">
-			<input type="button" name="return" onclick="location.href='view_all_users.php'" value="Back">
+			
 			</div>
 			</div>
 			</div>
